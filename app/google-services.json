@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "702026569708",
+    "firebase_url": "https://jale-c093f.firebaseio.com",
+    "project_id": "jale-c093f",
+    "storage_bucket": "jale-c093f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702026569708:android:06576c67411a8e480092c9",
+        "android_client_info": {
+          "package_name": "com.jvr.im"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "702026569708-j9bh2ig72t1d5e5dijf1g11kqj2qqtof.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jvr.im",
+            "certificate_hash": "2963da1383d3733c3ff83b82e92445b3069f2394"
+          }
+        },
+        {
+          "client_id": "702026569708-vnc1th3rmcjgrlte9g6pedr6umghmkmq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEGWhdYHTxxeVVm06JLDfqGLkYuyR8B6U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "702026569708-vnc1th3rmcjgrlte9g6pedr6umghmkmq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Jale!</string>
+    <string name="btnlogin">Login</string>
+    <string name="btnsing">Sign In</string>
+    <string name="email">Email</string>
+    <string name="strpassword">Password</string>
+    <string name="stror">Or</string>
+    <string name="strjale">Join the Jale Talent Network and find out about your next job or talent search opportunity.</string>
+    <string name="strname">Name</string>
+    <string name="str_errorpass">Passwords do not match</string>
+    <string name="str_errorcaracteres">Min 6 characters</string>
+    <string name="str_errordatos">Incomplete data</string>
+    <string name="strworker">Talent looking for work</string>
+    <string name="strcompany">Talent scout</string>
+    <string name="strwhatru">What are you?</string>
+    <string name="stremprender">Entrepreneur looking for support</string>
+    <string name="strage">Age</string>
+    <string name="strubi">Ubication</string>
+    <string name="strocupation">Occupation</string>
+    <string name="strpreguntatalento">What talent do you have? Describe your talent.</string>
+    <string name="strtrajectory">Tell us your trajectory.</string>
+    <string name="strtaghabilities">Tags of your skills</string>
+    <string name="strcompanyreg">Company</string>
+    <string name="strdescribe">Describe yourself</string>
+    <string name="strtagsearch">Tag the skills you are looking for</string>
+</resources>

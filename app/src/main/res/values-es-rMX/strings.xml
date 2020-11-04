@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Jale!</string>
+    <string name="btnlogin">Iniciar sesión</string>
+    <string name="btnsing">Registrarse</string>
+    <string name="email">Correo Electronico</string>
+    <string name="strpassword">Contraseña</string>
+    <string name="stror">O</string>
+    <string name="strjale">Únete a la red de talentos de Jale y conoce tu próxima oportunidad de empleo o de encontrar talento.</string>
+    <string name="strname">Nombre</string>
+    <string name="str_errorpass">Las contraseñas no coinciden</string>
+    <string name="str_errorcaracteres">Mínimo 6 caracteres</string>
+    <string name="str_errordatos">Datos incompletos</string>
+    <string name="strworker">Talento buscando jale</string>
+    <string name="strcompany">Buscador de talento</string>
+    <string name="strwhatru">¿Que eres?</string>
+    <string name="stremprender">Emprendedor en busca de apoyo</string>
+    <string name="strage">Edad</string>
+    <string name="strubi">Ubicación</string>
+    <string name="strocupation">Ocupación</string>
+    <string name="strpreguntatalento">¿Qué talento tienes? Describe tu talento.</string>
+    <string name="strtrajectory">Cuéntanos tu trayectoria.</string>
+    <string name="strtaghabilities">Etiquetas de tus habilidades</string>
+    <string name="strcompanyreg">Empresa</string>
+    <string name="strdescribe">Describete</string>
+    <string name="strtagsearch">Etiqueta las habilidades que estás buscando</string>
+</resources>
