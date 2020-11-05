@@ -24,4 +24,8 @@
     <string name="strcompanyreg">Empresa</string>
     <string name="strdescribe">Describete</string>
     <string name="strtagsearch">Etiqueta las habilidades que estás buscando</string>
+    <string name="strhome">Inicio</string>
+    <string name="strsearch">Buscar</string>
+    <string name="strmessage">Mensaje</string>
+    <string name="strprofile">Perfil</string>
 </resources>

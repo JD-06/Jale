@@ -34,6 +34,11 @@ import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import eightbitlab.com.blurview.BlurView;
 import eightbitlab.com.blurview.RenderScriptBlur;
@@ -46,12 +51,12 @@ public class loginscreen extends AppCompatActivity {
     private CallbackManager mCallbackManager;
     private static final String TAG = "login";
     private FirebaseUser prevUser, currentUser;
-
+    private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        databaseReference = FirebaseDatabase.getInstance().getReference();
         auth = FirebaseAuth.getInstance();
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions
                 .Builder()
@@ -193,6 +198,8 @@ public class loginscreen extends AppCompatActivity {
                 if(task.isSuccessful()){
                     dialog.dismiss();
                     Intent main = new Intent(loginscreen.this, register.class);
+                    main.putExtra("name",name);
+                    main.putExtra("picture","");
                     startActivity(main);
                     finish();
 
@@ -233,9 +240,29 @@ public class loginscreen extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Intent i = new Intent(loginscreen.this,MainActivity.class);
-                    startActivity(i);
-                    finish();
+                    databaseReference.child("Users").child(auth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if (snapshot.exists()){
+                                Intent i = new Intent(loginscreen.this,MainActivity.class);
+                                startActivity(i);
+                                finish();
+                            }else{
+                                Intent i = new Intent(loginscreen.this,register.class);
+                                i.putExtra("name",account.getDisplayName().toString());
+                                i.putExtra("picture",  account.getPhotoUrl().toString());
+                                startActivity(i);
+                                finish();
+                            }
+
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
+
                 }else{
                     Toast.makeText(loginscreen.this, "Error", Toast.LENGTH_SHORT).show();
                 }

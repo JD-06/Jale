@@ -31,6 +31,7 @@
         <item name="backgroundCardColor2">#28292e</item>
         <item name="cardTextColor">#DBFFFFFF</item>
         <item name="blurbackround">#8A000000</item>
+
     </style>
     <color name="background">#212121</color>
 

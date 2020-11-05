@@ -35,6 +35,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -46,6 +47,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:21.0.0'
     implementation 'com.google.firebase:firebase-auth:20.0.0'
     implementation 'com.google.firebase:firebase-database:19.5.1'
+    implementation 'com.google.firebase:firebase-firestore:22.0.0'
     //Auth Google & Facebook
     implementation 'com.google.android.gms:play-services-auth:18.1.0'
     implementation 'com.facebook.android:facebook-android-sdk:4.42.0'
@@ -58,5 +60,10 @@ dependencies {
     implementation 'com.github.tiper:MaterialSpinner:1.4.2'
     //tagseparator
     implementation 'com.github.mabbas007:TagsEditText:1.0.5'
+    //Upload
+    implementation 'com.karumi:dexter:5.0.0'
+    implementation 'com.android.volley:volley:1.1.0'
+    //piccasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
 }
