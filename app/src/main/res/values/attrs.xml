@@ -9,6 +9,7 @@
         <attr name="backgroundCardColor2" format="color"/>
         <attr name="blurbackround" format="color"/>
         <attr name="backgroundColor" format="color"/>
+        <attr name="backgroundColor2" format="color"/>
         <attr name="Color1" format="color"/>
         <attr name="Color2" format="color"/>
         <attr name="barcolor" format="color"/>
@@ -16,7 +17,14 @@
         <attr name="threeTextColor" format="color"/>
         <attr name="rpcolor" format="color"/>
         <attr name="iconbro" format="integer" />
-        <attr name="iconmic" format="integer" />
+        <attr name="iconplus" format="integer" />
+        <attr name="iconmark" format="integer" />
+        <attr name="iconverify" format="integer" />
+        <attr name="iconmenu" format="integer" />
+        <attr name="iconconfig" format="integer" />
+        <attr name="iconabout" format="integer" />
+        <attr name="iconlogout" format="integer" />
+
 
     </declare-styleable>
 </resources>

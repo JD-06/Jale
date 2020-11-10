@@ -28,4 +28,16 @@
     <string name="strsearch">Buscar</string>
     <string name="strmessage">Mensaje</string>
     <string name="strprofile">Perfil</string>
+    <string name="stroccupation">Ocupación</string>
+    <string name="strtrajectoryprof">Trayectoria</string>
+    <string name="strTalentdescribe">Descripción</string>
+    <string name="strconfig">Configuración</string>
+    <string name="strexit">Cerrar sesión</string>
+    <string name="strabout">"Acerca de "</string>
+    <string name="straccount">Cuenta</string>
+    <string name="strdocs">Documentos</string>
+    <string name="strsocial">Social</string>
+    <string name="stradddoc">Documento</string>
+    <string name="strfilename">Nombre del documento</string>
+    <string name="strselectfile">Seleccione Archivo</string>
 </resources>

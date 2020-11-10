@@ -31,13 +31,20 @@
         <item name="backgroundCardColor2">#28292e</item>
         <item name="cardTextColor">#DBFFFFFF</item>
         <item name="blurbackround">#8A000000</item>
-
+        <item name="iconplus">@drawable/ic_baseline_add_24light</item>
+        <item name="iconmark">@drawable/ic_baseline_bookmark_border_24light</item>
+        <item name="iconverify">@drawable/ic_baseline_verified_24light</item>
+        <item name="iconmenu">@drawable/ic_baseline_menu_24light</item>
+        <item name="iconconfig">@drawable/ic_baseline_settings_24light</item>
+        <item name="iconabout">@drawable/ic_baseline_architecture_24light</item>
+        <item name="iconlogout">@drawable/ic_baseline_exit_to_app_24light</item>
+        <item name="backgroundColor2">#28292e</item>
     </style>
     <color name="background">#212121</color>
 
     <style name="AppCard" parent="Widget.MaterialComponents.CardView">
         <item name="cardElevation">16dp</item>
-        <item name="cardBackgroundColor">#28292e</item>
+        <item name="cardBackgroundColor">#3BFFFFFF</item>
         <item name="cardCornerRadius">25dp</item>
     </style>
     <style name="MyEditTextTheme" parent="Widget.AppCompat.EditText">

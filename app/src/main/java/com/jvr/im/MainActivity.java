@@ -34,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_message:
                         selectedFragment = new message();
                         break;
+                    case R.id.nav_notification:
+                        selectedFragment = new notifications();
+                        break;
                     case R.id.nav_profile:
                         selectedFragment = new profile();
                         break;

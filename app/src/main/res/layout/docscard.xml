@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    style="@style/AppCard"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginLeft="16dp"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:src="@drawable/ic_pdf"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+        <TextView
+            android:textColor="?attr/cardTextColor"
+            android:fontFamily="@font/sansjale"
+            android:textSize="16dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:id="@+id/tvfilename"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
