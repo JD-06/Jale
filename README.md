@@ -1,6 +1,6 @@
 # Jale!
 
-<img src="https://raw.githubusercontent.com/JD-06/Jale/master/app/src/main/res/drawable/web_hi_res_512.png?token=AMX3OUGCAXWP5DLKIFVNVRS7VPAI4" style=" width:50px ;height:50px" />
+<img src="https://raw.githubusercontent.com/JD-06/Jale/master/app/src/main/res/drawable/web_hi_res_512.png" style=" width:50px ;height:50px" />
 Jale es una aplicación móvil, una red social donde los usuarios pueden
 interactuar entre si. Pueden conseguir empleo, patrocinio, inversiones,
 colaboraciones, también proveedores, llenar bacantes, entre otras actividades,
