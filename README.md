@@ -29,6 +29,7 @@ crecer.
 
 Screen Shots
 ----
+Modo claro:
 <div align="center">
        <img src="https://raw.githubusercontent.com/JD-06/Jale/master/assets/WhatsApp%20Image%202020-11-11%20at%203.34.30%20AM.jpeg" width="200px"</img> 
         <img src="https://raw.githubusercontent.com/JD-06/Jale/master/assets/WhatsApp%20Image%202020-11-11%20at%203.34.30%20AM%20(1).jpeg" width="200px"</img> 
@@ -41,6 +42,16 @@ Screen Shots
        <img src="https://raw.githubusercontent.com/JD-06/Jale/master/assets/WhatsApp%20Image%202020-11-11%20at%203.35.49%20AM%20(4).jpeg" width="200px"</img> 
        <img src="https://raw.githubusercontent.com/JD-06/Jale/master/assets/WhatsApp%20Image%202020-11-11%20at%205.17.20%20AM.jpeg" width="200px"</img> 
        
+</div>
+Modo nocturno:
+<div align="center">
+       <img src="https://raw.githubusercontent.com/JD-06/Jale/master/assets/noche1.jpeg" width="200px"</img> 
+        <img src="https://raw.githubusercontent.com/JD-06/Jale/master/assets/noche2.jpeg" width="200px"</img> 
+        <img src="https://raw.githubusercontent.com/JD-06/Jale/master/assets/noche3.jpeg" width="200px"</img> 
+</div>
+<div align="center">
+        <img src="https://raw.githubusercontent.com/JD-06/Jale/master/assets/noche4.jpeg" width="200px"</img> 
+       <img src="https://raw.githubusercontent.com/JD-06/Jale/master/assets/noche5.jpeg" width="200px"</img>  
 </div>
 
 ----
