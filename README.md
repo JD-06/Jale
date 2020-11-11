@@ -26,7 +26,7 @@ igual forma, una plataforma social donde los usuarios puedan beneficiarse de
 las experiencias, consejos, tipos, de los demás usuarios a través de grupos
 con los mismos interés. Para así aprender, mejorar, aportar, beneficiar y
 crecer.
-----
+
 Screen Shots
 ----
 <div align="center">
