@@ -27,14 +27,14 @@ crecer.
 
 Librerias usadas
 ----
--Firebase ![Firebase](https://firebase.google.com/images/brand-guidelines/logo-standard.png)
--Volley ![Volley](https://maxcdn.icons8.com/Share/icon/Sports/volleyball1600.png)
--RealTime BlurView \n
--RealTime DataBase \n
--Picasso \n
--PowerMenu \n
--MaterialSpinner \n
--Dexter \n
+-Firebase 
+-Volley 
+-RealTime BlurView 
+-RealTime DataBase 
+-Picasso 
+-PowerMenu 
+-MaterialSpinner 
+-Dexter 
 
 Universidad Politécnica de Altamira
 ----
