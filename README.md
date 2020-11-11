@@ -23,9 +23,20 @@ oportunidad de obtener lo que desean para su negocio, carrera, etc. Y de
 igual forma, una plataforma social donde los usuarios puedan beneficiarse de
 las experiencias, consejos, tipos, de los demás usuarios a través de grupos
 con los mismos interés. Para así aprender, mejorar, aportar, beneficiar y
-crecer. 
+crecer.
 
-License
+Librerias usadas
+----
+-Firebase (https://firebase.google.com/images/brand-guidelines/logo-standard.png)
+-Volley
+-RealTime BlurView
+-RealTime DataBase
+-Picasso
+-PowerMenu
+-MaterialSpinner
+-Dexter
+
+Universidad Politécnica de Altamira
 ----
 
 UPAlt
