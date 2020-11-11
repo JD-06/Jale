@@ -1,6 +1,6 @@
 # Jale!
 
-<div align="center">
+<div align="left">
        <img src="https://raw.githubusercontent.com/JD-06/Jale/master/app/src/main/res/drawable/web_hi_res_512.png" width="100px"</img> 
 </div>
 
@@ -30,9 +30,9 @@ crecer.
 Screen Shots
 ----
 <div align="center">
-       <img src="https://raw.githubusercontent.com/JD-06/Jale/master/assets/WhatsApp%20Image%202020-11-11%20at%203.34.30%20AM.jpeg" width="100px"</img> 
-        <img src="https://raw.githubusercontent.com/JD-06/Jale/master/assets/WhatsApp%20Image%202020-11-11%20at%203.34.30%20AM%20(1).jpeg" width="100px"</img> 
-        <img src="https://raw.githubusercontent.com/JD-06/Jale/master/assets/WhatsApp%20Image%202020-11-11%20at%203.35.49%20AM.jpeg" width="100px"</img> 
+       <img src="https://raw.githubusercontent.com/JD-06/Jale/master/assets/WhatsApp%20Image%202020-11-11%20at%203.34.30%20AM.jpeg" width="200px"</img> 
+        <img src="https://raw.githubusercontent.com/JD-06/Jale/master/assets/WhatsApp%20Image%202020-11-11%20at%203.34.30%20AM%20(1).jpeg" width="200px"</img> 
+        <img src="https://raw.githubusercontent.com/JD-06/Jale/master/assets/WhatsApp%20Image%202020-11-11%20at%203.35.49%20AM.jpeg" width="200px"</img> 
 </div>
 
 Librerias usadas
