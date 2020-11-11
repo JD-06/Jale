@@ -5,10 +5,42 @@
     android:layout_height="match_parent"
     tools:context=".home">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <LinearLayout
+           android:background="?attr/backgroundColor2"
+           android:orientation="horizontal"
+           android:id="@+id/lnmainhome"
+           android:padding="16dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <ImageView
+               android:id="@+id/btnadd"
+               android:layout_marginRight="16dp"
+               android:src="?attr/iconplus"
+               android:layout_width="25dp"
+               android:layout_height="match_parent"/>
+           <ImageView
+               android:src="?attr/iconbro"
+               android:layout_weight="1"
+               android:layout_width="200dp"
+               android:layout_height="40dp"/>
 
+
+           <ImageView
+               android:layout_marginLeft="16dp"
+               android:id="@+id/profmenu"
+               android:src="?attr/iconmark"
+               android:layout_width="25dp"
+               android:layout_height="match_parent"/>
+
+       </LinearLayout>
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/homerv"
+           android:layout_below="@+id/lnmainhome"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
+
+   </RelativeLayout>
 </FrameLayout>

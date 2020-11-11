@@ -27,14 +27,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Im"
         android:usesCleartextTraffic="true">
+        <activity android:name=".terms"></activity>
+        <activity android:name=".testpsicologico" />
+        <activity android:name=".ProfileVisitorView" />
+        <activity android:name=".trajectory" />
+        <activity android:name=".webview" />
         <activity
             android:name=".accountmanager"
             android:label="@string/title_activity_accountmanager"
-            android:theme="@style/Theme.Im.NoActionBar"></activity>
+            android:theme="@style/Theme.Im.NoActionBar" />
         <activity
             android:name=".prueba"
             android:label="@string/title_activity_prueba"
-            android:theme="@style/Theme.Im.NoActionBar"></activity>
+            android:theme="@style/Theme.Im.NoActionBar" />
         <activity android:name=".register" />
         <activity android:name=".MainActivity" />
         <activity android:name=".loginscreen" />

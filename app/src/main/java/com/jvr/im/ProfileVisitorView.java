@@ -1,46 +1,29 @@
 package com.jvr.im;
 
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.Intent;
-import android.content.res.Resources;
-import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.graphics.Typeface;
-import android.net.Uri;
-import android.os.Bundle;
-
-import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
-import androidx.loader.content.CursorLoader;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.provider.MediaStore;
-import android.util.Base64;
-import android.util.TypedValue;
+import android.app.AlertDialog;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -53,21 +36,11 @@ import com.skydoves.powermenu.PowerMenu;
 import com.skydoves.powermenu.PowerMenuItem;
 import com.squareup.picasso.Picasso;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.LineNumberReader;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-import static android.app.Activity.RESULT_CANCELED;
-import static android.app.Activity.RESULT_OK;
-import static com.facebook.FacebookSdk.getApplicationContext;
-
-
-public class profile extends Fragment {
+public class ProfileVisitorView extends AppCompatActivity {
 
     private FirebaseAuth auth;
     private FirebaseDatabase firebaseDatabase;
@@ -79,62 +52,63 @@ public class profile extends Fragment {
     private socialRecyclerAdapter socialRecyclerAdapter;
     private ArrayList<PictureProfile> pictures;
     private ArrayList<SocialProfile> socialProfiles;
+    private String id, namevisit;
     private  PowerMenu powerMenu;
+
     LinearLayoutManager HorizontalLayout;
     private String name,age,ubi,occupation,type,question = "",description= "",trajectory= "",company = "",picturelink;
-    public profile() {
-        // Required empty public constructor
-    }
-
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-
-        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        setContentView(R.layout.activity_profile_visitor_view);
+        Intent intent = getIntent();
+        id  = intent.getStringExtra("id");
         auth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
-        lnbtnprofile = view.findViewById(R.id.lnbtnprofile);
-        tvname = view.findViewById(R.id.profname);
-        tvage = view.findViewById(R.id.profage);
-        tvoccupation = view.findViewById(R.id.profileprofesion);
-        tvubi = view.findViewById(R.id.profubi);
-        tvtype = view.findViewById(R.id.proftype);
-        ivprofperfil = view.findViewById(R.id.ivprofperfil);
-        rvprof = view.findViewById(R.id.rvprofile);
-        profmenu = view.findViewById(R.id.profmenu);
-        rvsocial = view.findViewById(R.id.rvsocialprofile);
+        lnbtnprofile = findViewById(R.id.lnbtnprofile);
+        tvname = findViewById(R.id.profname);
+        tvage = findViewById(R.id.profage);
+        tvoccupation = findViewById(R.id.profileprofesion);
+        tvubi = findViewById(R.id.profubi);
+        tvtype = findViewById(R.id.proftype);
+        ivprofperfil = findViewById(R.id.ivprofperfil);
+        rvprof = findViewById(R.id.rvprofile);
+        rvsocial = findViewById(R.id.rvsocialprofile);
+        profmenu = findViewById(R.id.profmenu);
         HorizontalLayout
                 = new LinearLayoutManager(
-                getContext(),
+                ProfileVisitorView.this,
                 LinearLayoutManager.HORIZONTAL,
                 false);
         rvsocial.setLayoutManager(HorizontalLayout);
-        rvprof.setLayoutManager(new GridLayoutManager(getContext(),3));
+        rvprof.setLayoutManager(new GridLayoutManager(ProfileVisitorView.this,3));
 
-        powerMenu = new PowerMenu.Builder(getContext())
-                .addItem(new PowerMenuItem(getString(R.string.strconfig)))
-                .addItem(new PowerMenuItem(getString(R.string.strabout)))
-                .addItem(new PowerMenuItem(getString(R.string.strexit)))
+        powerMenu = new PowerMenu.Builder(ProfileVisitorView.this)
+                .addItem(new PowerMenuItem("Recomendar",R.drawable.ic_baseline_add_24))
+                .addItem(new PowerMenuItem("Seguir",R.drawable.ic_baseline_add_24))
                 .setAnimation(MenuAnimation.SHOWUP_TOP_RIGHT) // Animation start point (TOP | LEFT).
                 .setMenuRadius(10f) // sets the corner radius.
                 .setMenuShadow(10f) // sets the shadow.
-                .setTextColor(ContextCompat.getColor(getContext(),R.color.black))
+                .setTextColor(ContextCompat.getColor(ProfileVisitorView.this,R.color.black))
                 .setTextGravity(Gravity.CENTER)
                 .setTextTypeface(Typeface.create("font/sansjale.otf", Typeface.NORMAL))
                 .setMenuColor(Color.WHITE)
+                .setIconColor(Color.BLACK)
                 .setOnMenuItemClickListener(onMenuItemClickListener)
                 .setSelectedEffect(false)
                 .build();
-        CardView btntrajectory = view.findViewById(R.id.btntrajectory);
-        CardView cvprofile = view.findViewById(R.id.cvfragprofile);
+
+        CardView btntrajectory = findViewById(R.id.btntrajectory);
+        CardView cvprofile = findViewById(R.id.cvfragprofile);
         getDatos();
+        getDatosVisit();
+        profmenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                powerMenu.showAsDropDown(v);
+            }
+        });
         cvprofile.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -142,29 +116,43 @@ public class profile extends Fragment {
 
             }
         });
-        profmenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                powerMenu.showAsDropDown(v);
-
-            }
-        });
         btntrajectory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Intent intent = new Intent(getContext(), trajectory.class);
-                intent.putExtra("id",auth.getCurrentUser().getUid());
+                Intent intent = new Intent(ProfileVisitorView.this, trajectory.class);
+                intent.putExtra("id",id);
                 intent.putExtra("trajectory",trajectory);
                 intent.putExtra("describe",description);
                 startActivity(intent);
             }
         });
-        return view;
+
     }
+    private OnMenuItemClickListener<PowerMenuItem> onMenuItemClickListener = new OnMenuItemClickListener<PowerMenuItem>() {
+        @Override
+        public void onItemClick(int position, PowerMenuItem item) {
+            Toast.makeText(getApplicationContext(), item.getTitle(), Toast.LENGTH_SHORT).show();
+            switch (position){
+                case 0:
+                    showAlertDialogDocs();
+                    break;
+                case 1:
+                    /*
+                    intent = new Intent(getApplicationContext(), accountmanager.class);
+                    startActivity(intent);
+
+                     */
+                    break;
+
+
+            }
+            powerMenu.dismiss();
+        }
+    };
 
     private void getDatos(){
-        DatabaseReference databaseReference = firebaseDatabase.getReference("Users").child(auth.getCurrentUser().getUid());
+        DatabaseReference databaseReference = firebaseDatabase.getReference("Users").child(id);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -209,7 +197,7 @@ public class profile extends Fragment {
             }
         });
 
-        DatabaseReference databaseReferencerv = firebaseDatabase.getReference("Users").child(auth.getCurrentUser().getUid()+"/publications");
+        DatabaseReference databaseReferencerv = firebaseDatabase.getReference("Users").child(id+"/publications");
         databaseReferencerv.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -218,7 +206,7 @@ public class profile extends Fragment {
                     PictureProfile pictureProfile = dataSnapshot1.getValue(PictureProfile.class);
                     pictures.add(pictureProfile);
                 }
-                adapter = new pictureRecyclerAdapter(pictures,getContext());
+                adapter = new pictureRecyclerAdapter(pictures,getApplicationContext());
                 rvprof.setAdapter(adapter);
             }
 
@@ -228,7 +216,7 @@ public class profile extends Fragment {
             }
         });
 
-        DatabaseReference databaseReferencesocial = firebaseDatabase.getReference("Users").child(auth.getCurrentUser().getUid()+"/social");
+        DatabaseReference databaseReferencesocial = firebaseDatabase.getReference("Users").child(id+"/social");
         databaseReferencesocial.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -237,7 +225,7 @@ public class profile extends Fragment {
                     SocialProfile socialProfile = dataSnapshot1.getValue(SocialProfile.class);
                     socialProfiles.add(socialProfile);
                 }
-                socialRecyclerAdapter = new socialRecyclerAdapter(socialProfiles,getContext());
+                socialRecyclerAdapter = new socialRecyclerAdapter(socialProfiles,getApplicationContext());
                 rvsocial.setAdapter(socialRecyclerAdapter);
             }
 
@@ -249,42 +237,55 @@ public class profile extends Fragment {
 
 
     }
-    private OnMenuItemClickListener<PowerMenuItem> onMenuItemClickListener = new OnMenuItemClickListener<PowerMenuItem>() {
-        @Override
-        public void onItemClick(int position, PowerMenuItem item) {
-            Toast.makeText(getContext(), item.getTitle(), Toast.LENGTH_SHORT).show();
-            Intent intent;
-            switch (position){
-                case 0:
-                    intent = new Intent(getContext(), accountmanager.class);
-                    if(!type.equals("")){
-                        intent.putExtra("name",name);
-                        intent.putExtra("age",age);
-                        intent.putExtra("ubi",ubi);
-                        intent.putExtra("type",type);
-                        intent.putExtra("occupation",occupation);
-                        intent.putExtra("trajectory",trajectory);
-                        intent.putExtra("question",question);
-                        intent.putExtra("describe",description);
-                        intent.putExtra("copany",company);
-                        intent.putExtra("picture",picturelink);
-                        startActivity(intent);
-                    }
-                    break;
-                case 1:
-                    /*
-                    intent = new Intent(getApplicationContext(), accountmanager.class);
-                    startActivity(intent);
 
-                     */
-                    break;
-                case 2:
-                    auth.signOut();
-                    startActivity(new Intent(getContext(),loginscreen.class));
-                    getActivity().finish();
-                    break;
+    private void showAlertDialogDocs() {
+
+        // create an alert builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(ProfileVisitorView.this);
+        final View customLayout = getLayoutInflater().inflate(R.layout.recommendation, null);
+        builder.setView(customLayout);
+        final EditText etrecom = customLayout.findViewById(R.id.etrecommendation);
+        CardView btnok = customLayout.findViewById(R.id.btnokrecom);
+
+        // create and show the alert dialog
+        final AlertDialog dialog = builder.create();
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
+
+        btnok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatabaseReference databaseReferenceupload = firebaseDatabase.getReference("Users").child(id+"/recommendations").child(auth.getCurrentUser().getUid());
+                Map<String,Object> user = new HashMap<>();
+                user.put("recomm",etrecom.getText().toString());
+                user.put("name",namevisit);
+                databaseReferenceupload.setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(ProfileVisitorView.this, "Exito", Toast.LENGTH_SHORT).show();
+                            dialog.dismiss();
+                        }
+                    }
+                });
             }
-            powerMenu.dismiss();
-        }
-    };
+        });
+    }
+
+    private void getDatosVisit() {
+        DatabaseReference databaseReference = firebaseDatabase.getReference("Users").child(auth.getCurrentUser().getUid());
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    namevisit = snapshot.child("name").getValue().toString();
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
 }

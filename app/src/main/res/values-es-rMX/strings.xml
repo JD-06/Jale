@@ -40,4 +40,5 @@
     <string name="stradddoc">Documento</string>
     <string name="strfilename">Nombre del documento</string>
     <string name="strselectfile">Seleccione Archivo</string>
+    <string name="strrecommendations">Recomendaciones</string>
 </resources>

@@ -151,7 +151,8 @@ public class docsedit extends Fragment {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
-                                Toast.makeText(getContext(), "hola?", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), "Exito", Toast.LENGTH_SHORT).show();
+                                dialog.dismiss();
                             }
                         }
                     });

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".terms">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_margin="16dp"
+            android:fontFamily="@font/sansjale"
+            android:text="instrucciones para contestar test : La persona tiene que sentirse absolutamente libre de poder realizar su elección espontáneamente, sin presiones psicológicas, sugerencias o limitaciones de tiempo\n\n Es imprescindible que la persona no relacione los colores del test con algún objeto de su vida cotidiana (casa, auto, ropa,etc), como tampoco debe sentirse influido por la moda, combinaciones estéticas, etc \n\n En términos generales, el test no tiene restricciones de edad para su aplicación, puesto que puede administrarse tanto aniños, adolescentes, adultos, como personas de la tercera edad. \n\n En general, cualquier alteración fisiológica no debiera interfererir en el mecanismo de elección de colores; incluso encasos de daltonismo, se ha comprobado que su interferencia es mínima"
+            android:textSize="16dp"
+            android:textColor="?attr/primaryTextColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
+    <androidx.cardview.widget.CardView
+        android:layout_alignParentBottom="true"
+        style="@style/AppCard"
+        android:id="@+id/btnsig"
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true">
+        <TextView
+            android:textSize="20dp"
+            android:gravity="center"
+            android:text="Siguiente"
+            android:textColor="?attr/cardTextColor"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

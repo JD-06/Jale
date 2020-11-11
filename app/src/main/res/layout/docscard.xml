@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/btndocsview"
     style="@style/AppCard"
-    android:layout_marginTop="16dp"
-    android:layout_marginRight="16dp"
-    android:layout_marginLeft="16dp"
-
-    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="16dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_margin="16dp"
@@ -18,12 +16,12 @@
         android:layout_width="50dp"
         android:layout_height="50dp"/>
         <TextView
-            android:textColor="?attr/cardTextColor"
             android:fontFamily="@font/sansjale"
             android:textSize="16dp"
             android:layout_marginLeft="16dp"
-            android:gravity="center"
+            android:gravity="center|left"
             android:id="@+id/tvfilename"
+            android:textColor="@color/yellow_a200"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
     </LinearLayout>

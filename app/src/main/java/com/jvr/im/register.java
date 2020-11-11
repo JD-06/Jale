@@ -194,6 +194,7 @@ private String linkfoto;
         Map<String,Object> tags = new HashMap<>();
         switch (selection){
             case "Talento":
+                user.put("id",auth.getCurrentUser().getUid());
                 user.put("name",edname.getText().toString());
                 user.put("age",edage.getText().toString());
                 user.put("ubication",edubi.getText().toString());
@@ -207,6 +208,7 @@ private String linkfoto;
                 }
                 break;
             case "Buscador":
+                user.put("id",auth.getCurrentUser().getUid());
                 user.put("name",edname.getText().toString());
                 user.put("age",edage.getText().toString());
                 user.put("ubication",edubi.getText().toString());
@@ -221,6 +223,7 @@ private String linkfoto;
                 }
                 break;
             case "Espectador":
+                user.put("id",auth.getCurrentUser().getUid());
                 user.put("name",edname.getText().toString());
                 user.put("age",edage.getText().toString());
                 user.put("ubication",edubi.getText().toString());

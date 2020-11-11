@@ -149,10 +149,13 @@
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content">
                  <LinearLayout
+                     android:id="@+id/lnbtnprofile"
+                     android:visibility="invisible"
                      android:orientation="vertical"
                      android:layout_width="match_parent"
                      android:layout_height="wrap_content">
                      <androidx.cardview.widget.CardView
+                         android:id="@+id/btntrajectory"
                          android:clickable="true"
                          android:layout_marginTop="8dp"
                          android:layout_marginBottom="8dp"
@@ -173,49 +176,41 @@
                              android:layout_width="match_parent"
                              android:layout_height="wrap_content"/>
                      </androidx.cardview.widget.CardView>
-                     <androidx.cardview.widget.CardView
-                         android:layout_marginTop="8dp"
-                         android:layout_marginBottom="16dp"
-                         android:layout_marginLeft="16dp"
-                         android:layout_marginRight="16dp"
-                         android:clickable="true"
-                         android:foreground="?android:attr/selectableItemBackground"
-                         android:layout_weight="1"
-                         style="@style/AppCard"
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content">
-                         <TextView
-                             android:gravity="center"
-                             android:layout_margin="8dp"
-                             android:text="@string/strTalentdescribe"
-                             android:textColor="?attr/cardTextColor"
-                             android:textSize="16dp"
-                             android:fontFamily="@font/sansjale"
-                             android:layout_width="match_parent"
-                             android:layout_height="wrap_content"/>
-                     </androidx.cardview.widget.CardView>
+
                  </LinearLayout>
 
              </LinearLayout>
          </LinearLayout>
 
      </LinearLayout>
-         <HorizontalScrollView
+     </LinearLayout>
+     <LinearLayout
+         android:orientation="vertical"
+         android:layout_below="@+id/lnprofile"
+         android:id="@+id/lnsocialprofile"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+         <TextView
+             android:background="?attr/backgroundColor2"
+             android:gravity="left"
+             android:textSize="20dp"
+             android:padding="8dp"
+             android:text="@string/strsocial"
+             android:layout_weight="1"
              android:layout_width="match_parent"
-             android:layout_height="wrap_content">
-         <LinearLayout
+             android:layout_height="wrap_content"/>
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/rvsocialprofile"
              android:orientation="horizontal"
+             android:scrollbars="horizontal"
              android:layout_width="match_parent"
-             android:layout_height="wrap_content">
-
-         </LinearLayout>
-         </HorizontalScrollView>
+             android:layout_height="wrap_content"/>
      </LinearLayout>
      <TextView
          android:background="?attr/backgroundColor2"
          android:padding="8dp"
          android:gravity="center"
-         android:layout_below="@+id/lnprofile"
+         android:layout_below="@+id/lnsocialprofile"
          android:textColor="?attr/primaryTextColor"
          android:textSize="20dp"
          android:id="@+id/proftype"
