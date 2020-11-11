@@ -74,6 +74,6 @@ Librerias usadas
 Universidad Politécnica de Altamira
 ----
 
-UPAlt
+Jared Said Constantino Lemus
 
 
