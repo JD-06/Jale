@@ -27,6 +27,14 @@ las experiencias, consejos, tipos, de los demás usuarios a través de grupos
 con los mismos interés. Para así aprender, mejorar, aportar, beneficiar y
 crecer.
 
+Screen Shots
+----
+<div align="center">
+       <img src="https://raw.githubusercontent.com/JD-06/Jale/master/assets/WhatsApp%20Image%202020-11-11%20at%203.34.30%20AM.jpeg" width="100px"</img> 
+        <img src="https://raw.githubusercontent.com/JD-06/Jale/master/assets/WhatsApp%20Image%202020-11-11%20at%203.34.30%20AM%20(1).jpeg" width="100px"</img> 
+        <img src="https://raw.githubusercontent.com/JD-06/Jale/master/assets/WhatsApp%20Image%202020-11-11%20at%203.35.49%20AM.jpeg" width="100px"</img> 
+</div>
+
 Librerias usadas
 ----
 -Firebase 
