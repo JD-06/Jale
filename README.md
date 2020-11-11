@@ -27,7 +27,7 @@ crecer.
 
 Librerias usadas
 ----
--Firebase (https://firebase.google.com/images/brand-guidelines/logo-standard.png)
+-Firebase ![Firebase](https://firebase.google.com/images/brand-guidelines/logo-standard.png)
 -Volley
 -RealTime BlurView
 -RealTime DataBase
